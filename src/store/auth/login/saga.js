@@ -24,7 +24,6 @@ function* loginUser({ payload: { user, history } }) {
       if (response) {
         yield put(loginSuccess(response))
         let info = JSON.stringify(response?.data)
-        console.log("info", info)
         localStorage.setItem("authUser", info)
         history.push("/dashboard")
       }

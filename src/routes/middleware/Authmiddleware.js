@@ -12,7 +12,6 @@ const Authmiddleware = ({
     {...rest}
     render={props => {
       const auth = JSON.parse(localStorage.getItem("authUser"))
-      console.log("auth", auth)
       if (isAuthProtected && !auth?.token) {
         return (
           <Redirect
