@@ -1,0 +1,35 @@
+// 
+// _badge.scss
+// 
+
+.rounded-pill{
+   padding-right: .6em;
+    padding-left: .6em;
+}
+
+
+// Soft badge
+@mixin bg-variant-soft($bg) {
+  color: $bg;
+  background-color: rgba($bg, 0.18);
+
+  &[href] {
+      color: $bg;
+      text-decoration: none;
+      background-color: rgba($bg, 0.4);
+  }
+}
+
+
+@each $color, $value in $theme-colors {
+
+  .bg-soft-#{$color} {
+      @include bg-variant-soft($value);
+  }
+}
+
+// Dark badge
+
+.badge.bg-dark{
+  color: $light;
+}

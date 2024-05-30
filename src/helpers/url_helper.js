@@ -1,0 +1,5 @@
+export const LOGIN = "/auth/login"
+export const ALL_PRODUCTS = "/products"
+export const ADD_PRODUCT = "/products/add"
+export const UPDATE_PRODUCT = "/products"
+export const DELETE_PRODUCT = "/products"
